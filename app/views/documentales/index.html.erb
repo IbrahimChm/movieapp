@@ -1,0 +1,23 @@
+<h1>Listado de Documentales</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Sinopsis</th>
+      <th>Director</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @documentales.each do |documental| %>
+      <tr>
+        <td><%= documental.name %></td>
+        <td><%= documental.synopsis %></td>
+        <td><%= documental.director %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Agregar Documental', new_documental_path, class: 'btn btn-primary' %>
+
+

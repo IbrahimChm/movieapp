@@ -1,0 +1,23 @@
+<h1>Listado de Series</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Sinopsis</th>
+      <th>Director</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @series.each do |serie| %>
+      <tr>
+        <td><%= serie.name %></td>
+        <td><%= serie.synopsis %></td>
+        <td><%= serie.director %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Agregar Serie', new_serie_path, class: 'btn btn-primary' %>
+
+
